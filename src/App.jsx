@@ -275,10 +275,15 @@ function App() {
         <div className="mx-auto flex h-20 w-full max-w-6xl items-center justify-between px-6 md:px-10">
           <a
             href="#home"
-            className="font-heading text-2xl font-bold tracking-[0.22em] text-cyan-300"
+            className="inline-flex items-center"
             onClick={closeMobileMenu}
+            aria-label="Go to home"
           >
-            VK
+            <img
+              src="/favicon.svg"
+              alt="Vivek Kushwaha logo"
+              className="h-10 w-10 object-contain shadow-[0_0_22px_rgba(0,245,255,0.35)]"
+            />
           </a>
 
           <nav className="hidden items-center gap-8 md:flex">
