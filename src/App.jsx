@@ -53,16 +53,16 @@ const projects = [
     stack: ['React.js', 'Tailwind CSS'],
     description:
       'A premium personal showcase with motion-driven UI, responsive layouts, and modern glassmorphism.',
-    github: 'https://github.com/notVivekG/portfolio-website',
-    live: 'https://notvivekg.github.io/portfolio-website/',
+    github: 'https://github.com/notVivekG/portfolio',
+    live: 'https://vivek-kushwaha-portfolio.netlify.app',
   },
   {
     title: 'Product Review Platform',
     stack: ['React', 'Redux Toolkit', 'Appwrite', 'Tailwind', 'Vite'],
     description:
       'A modern review platform featuring state-managed workflows, filtering, and scalable backend integration.',
-    github: 'https://github.com/notVivekG/product-review-platform',
-    live: 'https://notvivekg.github.io/product-review-platform/',
+    github: 'https://github.com/notVivekG/tech-review-project',
+    live: 'https://tech-review-project.vercel.app/',
   },
   {
     title: 'Yoga Playlist Generator',
@@ -70,7 +70,7 @@ const projects = [
     description:
       'A wellness utility that recommends curated yoga playlists based on mood and session intensity.',
     github: 'https://github.com/notVivekG/yoga-playlist-generator',
-    live: 'https://notvivekg.github.io/yoga-playlist-generator/',
+    live: 'https://yoga-playlist-backend.onrender.com',
   },
   {
     title: 'NutraFit — AI Diet E-Commerce',
@@ -87,7 +87,7 @@ const projects = [
     description:
       'A curated set of mini builds focused on practical UI, algorithmic thinking, and rapid experimentation.',
     github: 'https://github.com/notVivekG',
-    live: 'https://github.com/notVivekG?tab=repositories',
+    live: 'https://github-profile-finder-dwae.onrender.com',
   },
 ]
 
@@ -245,6 +245,20 @@ function App() {
 
   const handleContactSubmit = (event) => {
     event.preventDefault()
+    const formData = new FormData(event.currentTarget)
+    const name = formData.get('name')?.toString().trim() ?? ''
+    const email = formData.get('email')?.toString().trim() ?? ''
+    const message = formData.get('message')?.toString().trim() ?? ''
+
+    const subject = encodeURIComponent(
+      `Portfolio Contact from ${name || 'Website Visitor'}`,
+    )
+    const body = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
+    )
+
+    window.location.href = `mailto:notvivekkushwaha@gmail.com?subject=${subject}&body=${body}`
+    event.currentTarget.reset()
   }
 
   return (
