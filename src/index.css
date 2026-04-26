@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Syne:wght@500;600;700;800&display=swap');
+@import 'tailwindcss';
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.55;
+  letter-spacing: 0.01em;
+  background: #030612;
+  color: #f8fafc;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'kern', 'liga', 'ss01';
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.font-heading {
+  font-family: 'Syne', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+::selection {
+  background: rgba(0, 245, 255, 0.28);
+  color: #f8fafc;
+}
+
+.glass-card {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.14),
+    rgba(255, 255, 255, 0.03)
+  );
+  box-shadow:
+    0 14px 48px rgba(2, 6, 23, 0.52),
+    0 0 42px rgba(0, 245, 255, 0.06);
+  backdrop-filter: blur(18px);
+}
+
+.animated-mesh {
+  background:
+    radial-gradient(circle at 14% 18%, rgba(0, 245, 255, 0.2), transparent 36%),
+    radial-gradient(circle at 84% 24%, rgba(168, 85, 247, 0.2), transparent 34%),
+    radial-gradient(circle at 54% 85%, rgba(0, 245, 255, 0.16), transparent 35%),
+    linear-gradient(140deg, #02040d 0%, #050916 52%, #02030a 100%);
+  background-size: 140% 140%;
+  animation: mesh-drift 20s ease-in-out infinite alternate;
+}
+
+.animated-mesh::before {
+  content: '';
+  position: absolute;
+  inset: -22%;
+  background:
+    radial-gradient(circle, rgba(0, 245, 255, 0.13), transparent 58%),
+    radial-gradient(circle, rgba(168, 85, 247, 0.13), transparent 62%);
+  filter: blur(72px);
+  animation: aurora-float 26s ease-in-out infinite;
+}
+
+.dot-grid-bg {
+  background-image: radial-gradient(rgba(148, 163, 184, 0.22) 0.65px, transparent 0.65px);
+  background-size: 24px 24px;
+  mask-image: radial-gradient(circle at center, black 28%, transparent 82%);
+  opacity: 0.22;
+  animation: dot-grid-pulse 10s ease-in-out infinite;
+}
+
+.hero-dot-grid {
+  background-image: radial-gradient(rgba(0, 245, 255, 0.45) 0.7px, transparent 0.7px);
+  background-size: 20px 20px;
+  mask-image: radial-gradient(circle at 35% 30%, black, transparent 75%);
+}
+
+@keyframes mesh-drift {
+  0% {
+    transform: scale(1) translate3d(0, 0, 0);
+    background-position: 0% 0%;
+  }
+  50% {
+    transform: scale(1.07) translate3d(1%, -1%, 0);
+    background-position: 52% 44%;
+  }
+  100% {
+    transform: scale(1) translate3d(-1%, 1%, 0);
+    background-position: 100% 100%;
+  }
+}
+
+@keyframes aurora-float {
+  0% {
+    transform: translate3d(-8%, -6%, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(8%, 5%, 0) scale(1.08);
+  }
+  100% {
+    transform: translate3d(-5%, 9%, 0) scale(1);
+  }
+}
+
+@keyframes dot-grid-pulse {
+  0%,
+  100% {
+    opacity: 0.16;
+  }
+  50% {
+    opacity: 0.28;
+  }
+}
