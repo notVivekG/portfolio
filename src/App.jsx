@@ -19,7 +19,6 @@ import {
   SiJavascript,
   SiMongodb,
   SiMysql,
-  SiNextdotjs,
   SiReact,
   SiRedux,
   SiShadcnui,
@@ -37,15 +36,15 @@ const navItems = [
 ]
 
 const aboutSkillProgress = [
-  { name: 'C/C++', level: 82 },
+  { name: 'C/C++', level: 94 },
   { name: 'JavaScript', level: 88 },
-  { name: 'React.js', level: 90 },
-  { name: 'Tailwind', level: 91 },
-  { name: 'Redux Toolkit', level: 84 },
+  { name: 'React.js', level: 92 },
+  { name: 'Tailwind', level: 98 },
+  { name: 'Redux Toolkit', level: 90 },
   { name: 'Flask', level: 76 },
-  { name: 'MongoDB', level: 83 },
-  { name: 'MySQL', level: 80 },
-  { name: 'Git', level: 86 },
+  { name: 'MongoDB', level: 68 },
+  { name: 'MySQL', level: 86 },
+  { name: 'Git', level: 96 },
 ]
 
 const projects = [
@@ -76,6 +75,7 @@ const projects = [
   {
     title: 'NutraFit — AI Diet E-Commerce',
     stack: ['React', 'Next.js', 'Express', 'MongoDB'],
+    status: 'Ongoing',
     description:
       'An AI-driven nutrition commerce concept blending personalized diet intelligence with product discovery.',
     github: 'https://github.com/notVivekG/nutrafit-ai-diet-ecommerce',
@@ -88,14 +88,6 @@ const projects = [
       'A curated set of mini builds focused on practical UI, algorithmic thinking, and rapid experimentation.',
     github: 'https://github.com/notVivekG',
     live: 'https://github.com/notVivekG?tab=repositories',
-  },
-  {
-    title: 'Open Source Contributions',
-    stack: ['GitHub', 'Community', 'Web Dev'],
-    description:
-      'Hands-on contributions and experiments across open repositories to sharpen engineering collaboration.',
-    github: 'https://github.com/notVivekG',
-    live: 'https://github.com/notVivekG',
   },
 ]
 
@@ -114,7 +106,6 @@ const skillsByGroup = [
     group: 'Frameworks',
     items: [
       { name: 'React.js', icon: SiReact },
-      { name: 'Next.js', icon: SiNextdotjs },
       { name: 'Tailwind CSS', icon: SiTailwindcss },
     ],
   },
@@ -539,6 +530,15 @@ function App() {
                 transition={{ type: 'spring', stiffness: 260, damping: 18 }}
                 className="group glass-card flex h-full flex-col rounded-3xl p-5 sm:p-6"
               >
+                {project.status && (
+                  <motion.span
+                    className="mb-3 inline-flex w-fit items-center rounded-full border border-violet-300/45 bg-violet-500/15 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-violet-100"
+                    animate={{ opacity: [0.75, 1, 0.75], scale: [1, 1.03, 1] }}
+                    transition={{ duration: 2.6, repeat: Infinity, ease: 'easeInOut' }}
+                  >
+                    {project.status}
+                  </motion.span>
+                )}
                 <h3 className="font-heading text-[1.55rem] font-semibold leading-tight text-white">
                   {project.title}
                 </h3>
