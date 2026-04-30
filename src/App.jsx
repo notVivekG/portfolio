@@ -486,7 +486,7 @@ function App() {
               className="glass-card flex items-center rounded-3xl p-7 sm:p-8"
             >
               <p className="text-base leading-8 text-slate-200 sm:text-lg">
-                I&apos;m a second-year CS student passionate about bridging AI and
+                I&apos;m a third-year CS student passionate about bridging AI and
                 full stack development. I love building products that are fast,
                 functional, and beautiful.
               </p>
