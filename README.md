@@ -1,16 +1,40 @@
-# React + Vite
+# Portfolio Website
+A premium personal showcase with motion-driven UI, responsive layouts, and modern glassmorphism.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 Key Features
+- **Motion-Driven UI**: Utilizes Framer Motion for smooth, interactive animations and transitions.
+- **Responsive Design**: Built with Tailwind CSS to ensure optimal viewing across all devices and screen sizes.
+- **Modular Architecture**: Clean, component-based React structure for easy maintenance and scaling.
 
-Currently, two official plugins are available:
+## 🧱 Tech Stack
+### Frontend
+- **Framework**: React 19 + Vite
+- **State/Routing**: React Hooks
+- **UI/Styling**: Tailwind CSS 4, Framer Motion, React Icons, React Type Animation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📂 Project Structure
+```text
+src/
+  components/  # Reusable UI elements like Header, AnimatedName, AnimatedBackground
+    sections/  # Dedicated components for page sections (Home, About, Projects, Skills, Contact)
+  constants/   # Static data arrays (projects list, skills, navigation items)
+  utils/       # Helper functions and Framer Motion variants
+```
 
-## React Compiler
+## 🛠️ Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Clone & Install:
+```bash
+git clone https://github.com/notVivekG/portfolio.git
+cd portfolio
+npm install
+```
 
-## Expanding the ESLint configuration
+### Run:
+```bash
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🧩 Development Notes
+- Extracted and modularized the main application logic into well-structured, maintainable section components.
+- Integrated `react-type-animation` and `framer-motion` for complex animated typography and UI transitions without sacrificing performance.
