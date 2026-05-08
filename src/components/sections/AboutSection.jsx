@@ -35,7 +35,7 @@ export default function AboutSection() {
             ].map(([label, value]) => (
               <div
                 key={label}
-                className="flex flex-col gap-1 rounded-xl border border-white/10 bg-white/[0.03] p-3 sm:flex-row sm:items-center sm:justify-between"
+                className="flex flex-col gap-1 rounded-xl border border-white/10 bg-white/3 p-3 sm:flex-row sm:items-center sm:justify-between"
               >
                 <span className="text-xs uppercase tracking-[0.18em] text-slate-400">
                   {label}
@@ -74,7 +74,7 @@ export default function AboutSection() {
               </div>
               <div className="h-2.5 overflow-hidden rounded-full bg-white/8">
                 <motion.div
-                  className="h-full rounded-full bg-gradient-to-r from-cyan-300 via-cyan-400 to-violet-500"
+                  className="h-full rounded-full bg-linear-to-r from-cyan-300 via-cyan-400 to-violet-500"
                   initial={{ width: 0 }}
                   whileInView={{ width: `${skill.level}%` }}
                   viewport={{ once: true, amount: 0.7 }}

@@ -1,8 +1,10 @@
-import { FaCss3Alt } from 'react-icons/fa'
+import { FaCss3Alt, FaRobot } from 'react-icons/fa'
 import { FiCode, FiCpu, FiPenTool, FiZap } from 'react-icons/fi'
+import { RiBearSmileFill } from 'react-icons/ri'
 import {
   SiCplusplus, SiDaisyui, SiFlask, SiGit, SiHtml5, SiJavascript,
   SiMongodb, SiMysql, SiReact, SiRedux, SiShadcnui, SiTailwindcss,
+  SiWarp,
 } from 'react-icons/si'
 import { TbSql } from 'react-icons/tb'
 import { VscVscode } from 'react-icons/vsc'
@@ -87,6 +89,7 @@ export const skillsByGroup = [
     group: 'Libraries',
     items: [
       { name: 'Redux Toolkit', icon: SiRedux },
+      { name: 'Zustand', icon: RiBearSmileFill },
       { name: 'DaisyUI', icon: SiDaisyui },
       { name: 'shadcn', icon: SiShadcnui },
     ],
@@ -96,6 +99,8 @@ export const skillsByGroup = [
     items: [
       { name: 'Git', icon: SiGit },
       { name: 'VS Code', icon: VscVscode },
+      { name: 'Warp', icon: SiWarp },
+      { name: 'Antigravity', icon: FaRobot },
     ],
   },
   {
