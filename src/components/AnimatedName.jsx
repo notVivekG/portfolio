@@ -6,7 +6,7 @@ export default function AnimatedName({ text }) {
   return (
     <h1 className="font-heading text-5xl font-bold leading-[1.02] tracking-tight text-white sm:text-6xl lg:text-7xl">
       {words.map((word, wordIndex) => (
-        <span key={`${word}-${wordIndex}`} className="block">
+        <span key={`${word}-${wordIndex}`} className="block whitespace-nowrap">
           {word.split('').map((char, charIndex) => {
             const delayIndex = charCounter
             charCounter += 1

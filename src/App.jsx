@@ -3,8 +3,10 @@ import AnimatedBackground from './components/AnimatedBackground'
 import Header from './components/Header'
 import HomeSection from './components/sections/HomeSection'
 import AboutSection from './components/sections/AboutSection'
-import ProjectsSection from './components/sections/ProjectsSection'
 import SkillsSection from './components/sections/SkillsSection'
+import ProjectsSection from './components/sections/ProjectsSection'
+import OpenSourceSection from './components/sections/OpenSourceSection'
+import LeadershipSection from './components/sections/LeadershipSection'
 import ContactSection from './components/sections/ContactSection'
 
 function App() {
@@ -26,11 +28,17 @@ function App() {
       <AnimatedBackground />
       <Header isScrolled={isScrolled} />
 
+      {/*
+        Section render order matches nav:
+        Home → About → Skills → Projects → Open Source → Leadership → Contact
+      */}
       <main className="relative z-10 mx-auto flex w-full max-w-6xl flex-col gap-24 px-6 pb-24 pt-34 md:gap-28 md:px-10 md:pt-36 xl:gap-32">
         <HomeSection />
         <AboutSection />
-        <ProjectsSection />
         <SkillsSection />
+        <ProjectsSection />
+        <OpenSourceSection />
+        <LeadershipSection />
         <ContactSection />
       </main>
     </div>

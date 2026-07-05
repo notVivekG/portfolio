@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { FaEnvelope, FaLinkedinIn, FaGithub } from 'react-icons/fa'
+import { SiLeetcode } from 'react-icons/si'
 import { sectionVariants, itemVariants } from '../../utils/motion'
 
 export default function ContactSection() {
@@ -41,7 +42,7 @@ export default function ContactSection() {
 
         <motion.div
           variants={itemVariants}
-          className="mt-8 grid gap-3 text-sm sm:grid-cols-3"
+          className="mt-8 grid gap-3 text-sm sm:grid-cols-2 lg:grid-cols-4"
         >
           <a
             href="mailto:notvivekkushwaha@gmail.com"
@@ -56,7 +57,7 @@ export default function ContactSection() {
             </p>
           </a>
           <a
-            href="https://linkedin.com/in/vivek-kushwaha"
+            href="https://linkedin.com/in/vivek-kushwaha-59961828b"
             target="_blank"
             rel="noreferrer"
             className="rounded-2xl border border-white/12 bg-white/[0.03] p-4 transition-colors hover:border-cyan-300/60"
@@ -66,6 +67,18 @@ export default function ContactSection() {
               LinkedIn
             </div>
             <p className="text-slate-200">linkedin.com/in/vivek-kushwaha</p>
+          </a>
+          <a
+            href="https://leetcode.com/u/notvivekkushwaha/"
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-2xl border border-white/12 bg-white/[0.03] p-4 transition-colors hover:border-cyan-300/60"
+          >
+            <div className="mb-2 flex items-center gap-2 text-cyan-300">
+              <SiLeetcode />
+              LeetCode
+            </div>
+            <p className="text-slate-200">notvivekkushwaha</p>
           </a>
           <a
             href="https://github.com/notVivekG"
