@@ -49,6 +49,14 @@ export const aboutSkillProgress = [
 // ─── Projects ──────────────────────────────────────────────────────────────────
 export const projects = [
   {
+    title: 'Resume RAG Assistant',
+    stack: ['Python', 'Flask', 'React', 'ChromaDB', 'Sentence Transformers', 'Google Gemini API'],
+    description:
+      'An end-to-end Retrieval-Augmented Generation assistant that answers questions about a resume by combining ChromaDB vector search with Google Gemini, including multi-turn chat and a source-attribution view showing retrieved chunks and similarity scores.',
+    github: 'https://github.com/notVivekG/rag-project',
+    live: '',
+  },
+  {
     title: 'Emergency Response Platform',
     stack: ['React', 'Node.js', 'Express', 'Socket.io', 'MongoDB', 'Leaflet'],
     description:
