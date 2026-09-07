@@ -7,11 +7,14 @@ import {
   SiDaisyui,
   SiFlask,
   SiGit,
+  SiGooglegemini,
   SiHtml5,
   SiJavascript,
+  SiJupyter,
   SiMongodb,
   SiMysql,
   SiNodedotjs,
+  SiPython,
   SiReact,
   SiRedux,
   SiShadcnui,
@@ -19,7 +22,13 @@ import {
   SiVite,
   SiWarp,
 } from 'react-icons/si'
-import { TbSql } from 'react-icons/tb'
+import {
+  TbDatabaseSearch,
+  TbPrompt,
+  TbSql,
+  TbTransform,
+  TbVector,
+} from 'react-icons/tb'
 import { VscVscode } from 'react-icons/vsc'
 
 // ─── Navigation ────────────────────────────────────────────────────────────────
@@ -112,22 +121,23 @@ export const skillsByGroup = [
   {
     group: 'Languages',
     items: [
-      { name: 'C/C++',      icon: SiCplusplus   },
-      { name: 'JavaScript', icon: SiJavascript   },
-      { name: 'HTML',       icon: SiHtml5        },
-      { name: 'CSS',        icon: FaCss3Alt      },
-      { name: 'SQL',        icon: TbSql          },
+      { name: 'C/C++',      icon: SiCplusplus },
+      { name: 'Python',     icon: SiPython    },
+      { name: 'JavaScript', icon: SiJavascript },
+      { name: 'HTML',       icon: SiHtml5      },
+      { name: 'CSS',        icon: FaCss3Alt    },
+      { name: 'SQL',        icon: TbSql        },
     ],
   },
   {
     group: 'Frontend',
     items: [
-      { name: 'React.js',      icon: SiReact        },
-      { name: 'Tailwind CSS',  icon: SiTailwindcss  },
-      { name: 'Redux Toolkit', icon: SiRedux        },
+      { name: 'React.js',      icon: SiReact         },
+      { name: 'Tailwind CSS',  icon: SiTailwindcss   },
       { name: 'Zustand',       icon: RiBearSmileFill },
-      { name: 'DaisyUI',       icon: SiDaisyui      },
-      { name: 'shadcn/ui',     icon: SiShadcnui     },
+      { name: 'Redux Toolkit', icon: SiRedux         },
+      { name: 'DaisyUI',       icon: SiDaisyui       },
+      { name: 'shadcn/ui',     icon: SiShadcnui      },
     ],
   },
   {
@@ -141,8 +151,18 @@ export const skillsByGroup = [
   {
     group: 'Databases',
     items: [
-      { name: 'MySQL',   icon: SiMysql   },
-      { name: 'MongoDB', icon: SiMongodb },
+      { name: 'MySQL',                icon: SiMysql   },
+      { name: 'MongoDB',              icon: SiMongodb },
+      { name: 'ChromaDB (Vector DB)', icon: TbVector  },
+    ],
+  },
+  {
+    group: 'AI/ML',
+    items: [
+      { name: 'Retrieval-Augmented Generation (RAG)', icon: TbDatabaseSearch },
+      { name: 'Sentence Transformers',                icon: TbTransform      },
+      { name: 'Prompt Engineering',                   icon: TbPrompt         },
+      { name: 'LLM Integration (Google Gemini API)',  icon: SiGooglegemini   },
     ],
   },
   {
@@ -151,9 +171,10 @@ export const skillsByGroup = [
       { name: 'Git',         icon: SiGit      },
       { name: 'GitHub',      icon: FaGithub   },
       { name: 'VS Code',     icon: VscVscode  },
-      { name: 'Warp',        icon: SiWarp     },
       { name: 'Antigravity', icon: FaRobot    },
+      { name: 'Warp',        icon: SiWarp     },
       { name: 'Vite',        icon: SiVite     },
+      { name: 'Jupyter Lab', icon: SiJupyter  },
     ],
   },
   {
@@ -191,7 +212,7 @@ export const openSourceContributions = [
       'Diagnosed and resolved asynchronous state-management and Qt signal lifecycle issues in a production C++/Qt codebase.',
     ],
     // Update prUrl when the PR number changes — no component edit needed.
-    prUrl:   'https://github.com/PrismLauncher/PrismLauncher/pull/5719',
+    prUrl:   'https://github.com/PrismLauncher/PrismLauncher/pull/6017',
     repoUrl: 'https://github.com/PrismLauncher/PrismLauncher',
   },
 ]
