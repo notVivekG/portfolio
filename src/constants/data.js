@@ -207,8 +207,16 @@ export const leadershipEvents = [
     title: "Freshers' Party",
     description:
       "Led planning and execution of the college Freshers' Party including decoration, catering, stage coordination, and event hosting for 250+ participants.",
-    // Drop real images into /public/events/freshers/ and list them here.
-    images: [],
+    images: [
+      {
+        src: '/events/freshers/fresher-1.jpeg',
+        caption: "Stage anchoring and hosting the Freshers' Party",
+      },
+      {
+        src: '/events/freshers/fresher-2.jpeg',
+        caption: 'Event hosting and stage coordination',
+      },
+    ],
   },
   {
     id: 'teachers-day',
@@ -216,7 +224,23 @@ export const leadershipEvents = [
     title: "Teacher's Day Celebration",
     description:
       'Planned, coordinated, and anchored the college Teacher\'s Day celebration.',
-    // Drop real images into /public/events/teachers-day/ and list them here.
-    images: [],
+    images: [
+      {
+        src: '/events/teachers-day/teachers-day-1.jpeg',
+        caption: "Anchoring the Teacher's Day celebration ceremony",
+      },
+      {
+        src: '/events/teachers-day/teachers-day-2.jpeg',
+        caption: 'Co-anchoring and hosting from the stage podium',
+      },
+      {
+        src: '/events/teachers-day/teachers-day-3.jpeg',
+        caption: 'Stage anchoring and ceremony proceedings',
+      },
+      {
+        src: '/events/teachers-day/teachers-day-4.jpeg',
+        caption: "Addressing faculty and students on Teacher's Day",
+      },
+    ],
   },
 ]
