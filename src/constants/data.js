@@ -44,7 +44,8 @@ export const navItems = [
 
 // ─── About — skill progress bars ───────────────────────────────────────────────
 export const aboutSkillProgress = [
-  { name: 'C/C++',        level: 94 },
+  { name: 'C/C++',        level: 96 },
+  { name: 'Python',       level: 90 },
   { name: 'JavaScript',   level: 88 },
   { name: 'React.js',     level: 92 },
   { name: 'Tailwind',     level: 98 },
